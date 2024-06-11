@@ -1,4 +1,4 @@
-export const URL_API = "http://localhost:5000"
+export const URL_API = "https://forum-go-production.up.railway.app/"
 import toast from 'react-hot-toast';
 import Cookies from 'universal-cookie';
 

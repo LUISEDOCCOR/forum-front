@@ -31,7 +31,7 @@ export const SignUpAPI = async (name, email, password) => {
 export const LoginAPI = async (email, password) => {
     const body = {
         password: password,
-        email: email,
+        email: email
     }
     
     const response = await fecthApiAuth("/user/login", "POST", body)

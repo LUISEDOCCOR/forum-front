@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
-import { getAllPosts } from "../utils/posts/post"
+import { getMyPosts } from "../utils/posts/post"
 
-export const useGetPosts = () => {
+export const useGetMyPosts = () => {
     const [Posts, setPosts] = useState([])
     const [isLoading, setLoading] = useState(false)
 
     const fetchData = async () => {
         setLoading(true)
-        const data = await getAllPosts()
+        const data = await getMyPosts()
         setPosts(data)
         setLoading(false)
     }

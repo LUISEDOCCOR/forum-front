@@ -11,6 +11,7 @@ export const AuthContextProvider = ({children}) =>{
     const cookies = new Cookies();
     const jwt = cookies.get('jwt');
     const username = cookies.get('username');
+    const id = cookies.get('id');
     const [isLogged, setLogged] = useState(false)
     
     const handelClickLogout = () =>{
@@ -22,14 +23,11 @@ export const AuthContextProvider = ({children}) =>{
         if (!jwt) {
             setLogged(false)
             navigate('/preview');
-        }else{
-            setLogged(true)
-            navigate("/")
-        }
+        }else{ setLogged(true) }
     }, [jwt, navigate]);
 
     return (
-        <AuthContext.Provider value={{ isLogged, handelClickLogout, username }}>
+        <AuthContext.Provider value={{ isLogged, handelClickLogout, username, id }}>
             {children}
         </AuthContext.Provider>
     );

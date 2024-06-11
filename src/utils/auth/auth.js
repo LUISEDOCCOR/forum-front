@@ -23,6 +23,7 @@ export const SignUpAPI = async (name, email, password) => {
         const cookies = new Cookies
         cookies.set("jwt", data.jwt, {path:'/'})
         cookies.set("username", data.username, {path:'/'})
+        cookies.set("id", data.id, {path:'/'})
         return true
     }
 }
@@ -42,6 +43,7 @@ export const LoginAPI = async (email, password) => {
         const cookies = new Cookies
         cookies.set("jwt", data.jwt, {path:'/'})
         cookies.set("username", data.username, {path:'/'})
+        cookies.set("id", data.id, {path:'/'})
         return true
     }
 }
@@ -50,4 +52,5 @@ export const Logout = () => {
     const cookies = new Cookies
     cookies.remove("jwt", {path:'/'}) 
     cookies.remove("username", {path:'/'}) 
+    cookies.remove("id", {path:'/'}) 
 }

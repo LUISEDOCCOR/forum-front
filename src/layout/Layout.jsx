@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { isLive } from "../utils/api"
+import { Toaster } from 'react-hot-toast';
+
 
 export const Layaot = ({children}) => {
     useEffect(() => {
@@ -9,6 +11,7 @@ export const Layaot = ({children}) => {
     return (
         <div className="bg-cBlack min-h-screen">
             {children}
+            <Toaster/>
         </div>
     )
 }

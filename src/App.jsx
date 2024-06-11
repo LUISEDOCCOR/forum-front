@@ -8,6 +8,7 @@ import { HomePage } from "./pages";
 import { Login } from "./pages/login";
 import { SignUp } from "./pages/signup";
 import { Preview } from "./pages/preview";
+import { MyPosts } from "./pages/myposts";
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
     {
       path: "/preview",
       element: <AuthContextProvider><Preview/></AuthContextProvider>
+    },
+    {
+      path: "/myposts",
+      element: <AuthContextProvider><MyPosts/></AuthContextProvider>
     },
     {
       path: "/login",

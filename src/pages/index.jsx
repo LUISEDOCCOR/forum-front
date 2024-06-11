@@ -3,11 +3,11 @@ import { useGetPosts } from "../hooks/useGetPosts"
 import { ContainerPosts } from "../components/containerPosts"
 
 export const HomePage = () => {
-    const { Posts, isLoading } = useGetPosts()
+    const { Posts, fetchData ,isLoading } = useGetPosts()
 
     return (
         <LayoutForum header="Todas las publicaciones ">
-            <ContainerPosts Posts={Posts} isLoading={isLoading}/>
+            <ContainerPosts Posts={Posts} isLoading={isLoading} fetchData={fetchData}/>
         </LayoutForum>
     )
 }

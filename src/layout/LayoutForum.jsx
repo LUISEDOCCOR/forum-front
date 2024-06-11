@@ -2,7 +2,7 @@ import { Layaot } from "./Layout"
 import { useAuth } from "../context/authContex"
 
 export const LayoutForum = ({children, header}) => {
-    const { isLogged, handelClickLogout, username } = useAuth() 
+    const { isLogged, handelClickLogout, username, id } = useAuth() 
 
     return (
        <Layaot>
@@ -14,7 +14,7 @@ export const LayoutForum = ({children, header}) => {
                             src="/icon.webp" 
                             alt="icon codetopia" 
                         />
-                        <h1 className="text-2xl font-semibold">Codetopia</h1>
+                        <a href="/"><h1 className="text-2xl font-semibold">Codetopia</h1></a>
                     </div>
                     {
                         isLogged ? (
@@ -29,7 +29,7 @@ export const LayoutForum = ({children, header}) => {
                                 <a 
                                 className="border px-3 py-1 border-transparent rounded 
                                 hover:bg-neutral-800 hover:border-neutral-700 transition-colors"
-                                href=""
+                                href="/myposts"
                                 >
                                     Mis Publicaciones
                                 </a>

@@ -46,7 +46,7 @@ export const ContainerPosts = ({isLoading, Posts, fetchData}) =>     {
                                                         <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                                                     </svg>
                                                 </button>
-                                             <a href="/edit/post/id">
+                                             <a href={`editpost/${ID}`}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 stroke-cGray" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                                     <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />

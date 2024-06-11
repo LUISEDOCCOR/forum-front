@@ -13,7 +13,7 @@ export const MyPosts = () => {
                 ) : (
                     <section className="flex flex-col items-center gap-6">
                         <h3 className="text-2xl">Aún no has publicado nada</h3>
-                        <a href="" className="text-xl font-semibold">Publicar algo</a>
+                        <a href="/addpost" className="text-xl font-semibold">Publicar algo</a>
                     </section>
                 )
             }

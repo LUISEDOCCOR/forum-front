@@ -22,7 +22,7 @@ export const LayoutForum = ({children, header}) => {
                                 <a 
                                 className="border px-3 py-1 border-transparent rounded 
                                 hover:bg-neutral-800 hover:border-neutral-700 transition-colors"
-                                href=""
+                                href="/addpost"
                                 >
                                     Publicar
                                 </a>
@@ -63,7 +63,7 @@ export const LayoutForum = ({children, header}) => {
                 </nav>
             </header>
             <main className="mx-auto max-w-7xl py-12 space-y-8">
-                <span className="text-lg">{header}</span>
+                <span className="text-xl font-semibold">{header}</span>
                 {children}
             </main>
        </Layaot>

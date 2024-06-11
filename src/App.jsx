@@ -9,6 +9,8 @@ import { Login } from "./pages/login";
 import { SignUp } from "./pages/signup";
 import { Preview } from "./pages/preview";
 import { MyPosts } from "./pages/myposts";
+import { AddPost } from "./pages/addPost";
+import { EditPost } from "./pages/editPost";
 
 function App() {
 
@@ -24,6 +26,14 @@ function App() {
     {
       path: "/myposts",
       element: <AuthContextProvider><MyPosts/></AuthContextProvider>
+    },
+    {
+      path: "/addpost",
+      element: <AuthContextProvider><AddPost/></AuthContextProvider>
+    },
+    {
+      path: "/editpost/:id",
+      element: <AuthContextProvider><EditPost/></AuthContextProvider>
     },
     {
       path: "/login",

@@ -9,7 +9,7 @@ export const SignUpAPI = async (name, email, password) => {
         email: email,
     }
     
-    const response = await fecthApiAuth("/user/create", "POST", body)
+    const response = await fecthApiAuth("user/create", "POST", body)
     if(response.mode == "error"){
         const message = response.msg
         if(message.includes("duplicate")){
@@ -34,7 +34,7 @@ export const LoginAPI = async (email, password) => {
         email: email
     }
     
-    const response = await fecthApiAuth("/user/login", "POST", body)
+    const response = await fecthApiAuth("user/login", "POST", body)
     if(response.mode == "error"){
         toast.error(response.msg)
         return false

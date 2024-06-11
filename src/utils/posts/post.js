@@ -1,6 +1,5 @@
 import toast from "react-hot-toast";
 import { URL_API, fecthApiPost, fecthApiPostGet } from "../api"; 
-import Cookies from "universal-cookie";
 
 
 export const previewPosts = async () =>{

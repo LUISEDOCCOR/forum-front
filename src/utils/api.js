@@ -1,4 +1,4 @@
-export const URL_API = "https://forum-go-production.up.railway.app/"
+export const URL_API = import.meta.env.VITE_BACKEND_URL
 import toast from 'react-hot-toast';
 import Cookies from 'universal-cookie';
 

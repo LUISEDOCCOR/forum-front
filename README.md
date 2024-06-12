@@ -15,6 +15,9 @@ Codetopia es una aplicación de foro de programación diseñada para facilitar e
 
 4. **Ver Publicaciones:** Los usuarios pueden explorar todas las publicaciones disponibles en la plataforma, tanto las que han creado como las de otros usuarios. Pueden buscar publicaciones específicas o filtrarlas por etiquetas.
 
+## API Repo
+[URL](https://github.com/LUISEDOCCOR/forum-go)
+
 ## Tecnologías Utilizadas
 
 - **React:** Utilizado para la construcción de la interfaz de usuario interactiva y dinámica.

@@ -15,8 +15,8 @@ export const EditPost = () => {
     const navigate = useNavigate()
     const [isLoading, setLoading] = useState(false)
 
-    const titleRef = useRef("")
-    const contentRef = useRef("")
+    const [title, setTitle] = useState()
+    const [content, setContent] = useState()
 
     const fetchPost = async () => {
         setLoading(true)
@@ -25,8 +25,8 @@ export const EditPost = () => {
         if(response.length == 0){
             navigate("/")
         }else{
-            titleRef.current.value = response.title
-            contentRef.current.value = response.content
+            setTitle(response.title) 
+            setContent(response.content)
         }
     }
 
@@ -36,8 +36,6 @@ export const EditPost = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const title = titleRef.current.value
-        const content = contentRef.current.value
 
         if (title == "" || content == ""){
             toast.error("Rellene todos los campos")
@@ -61,11 +59,19 @@ export const EditPost = () => {
                 ) : (
                     <LayoutPost type="edit">
                         <form onSubmit={e => handleSubmit(e)} className="space-y-8">
-                                    <Input reference={titleRef} type="text" placeholder="Ingresa el titulo" />
-                                    <textarea ref={contentRef} placeholder="Que estás pensando?" 
+                                <input 
+                                    onChange={e => {setTitle(e.target.value)}}
+                                    value={title}
+                                    type="text"
+                                    placeholder="Ingrese el titulo"
+                                    className="bg-transparent text-white w-full max-w-xl text-xl font-semibold py-2 px-3
+                                    rounded-lg outline-none border-2 border-cGray placeholder:text-cGray ">
+                                </input>                                    
+                                <textarea onChange={e => {setContent(e.target.value)}}
+                                    value={content} placeholder="Que estás pensando?" 
                                     className="bg-transparent text-white w-full max-w-xl h-96 text-xl font-semibold py-2 px-3
                                     rounded-lg outline-none border-2 border-cGray placeholder:text-cGray"
-                                    ></textarea>
+                                ></textarea>
                                     <Button label="Editar"/>
                             </form>
                     </LayoutPost>

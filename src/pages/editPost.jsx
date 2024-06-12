@@ -32,7 +32,7 @@ export const EditPost = () => {
 
     useEffect(() => {
         fetchPost()
-    },[])
+    },[id, navigate])
 
     const handleSubmit = async (e) => {
         e.preventDefault()

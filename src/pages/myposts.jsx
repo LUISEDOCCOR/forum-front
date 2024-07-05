@@ -1,6 +1,7 @@
 import { ContainerPosts } from "../components/containerPosts";
 import { useGetMyPosts } from "../hooks/useGetMyPosts";
 import { LayoutForum } from "../layout/LayoutForum";
+import { Link } from "react-router-dom";
 
 export const MyPosts = () => {
   const { Posts, fetchData, isLoading } = useGetMyPosts();
@@ -16,9 +17,9 @@ export const MyPosts = () => {
       ) : (
         <section className="flex flex-col items-center gap-6">
           <h3 className="text-2xl">Aún no has publicado nada</h3>
-          <a href="/addpost" className="text-xl font-semibold">
+          <Link to="/addpost" className="text-xl font-semibold">
             Publicar algo
-          </a>
+          </Link>
         </section>
       )}
     </LayoutForum>

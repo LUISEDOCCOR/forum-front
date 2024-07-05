@@ -8,7 +8,7 @@ export const Layaot = ({ children }) => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-cBlack">
+    <div className="min-h-screen w-full bg-[#daf5f0] text-cBlack">
       {children}
       <Toaster />
     </div>

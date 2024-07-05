@@ -1,5 +1,6 @@
 import { Layaot } from "./Layout";
 import { useAuth } from "../context/authContex";
+import { Link } from "react-router-dom";
 
 export const LayoutForum = ({ children, header }) => {
   const { isLogged, handelClickLogout, username } = useAuth();
@@ -10,7 +11,7 @@ export const LayoutForum = ({ children, header }) => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              className="aspect-square h-16 w-16 rounded-full object-cover object-center"
+              className="aspect-square h-12 w-12 rounded-lg"
               src="/icon.webp"
               alt="icon codetopia"
             />
@@ -19,46 +20,43 @@ export const LayoutForum = ({ children, header }) => {
             </a>
           </div>
           {isLogged ? (
-            <div className="flex items-center gap-6 text-xl font-semibold">
-              <a
-                className="rounded border border-transparent px-3 py-1 transition-colors hover:border-neutral-700 hover:bg-neutral-800"
-                href="/addpost"
+            <div className="flex items-center gap-8 text-xl font-semibold">
+              <Link
+                className="shadow-nb shadow-nb-animation bg-[#ff69b4] px-6 py-2 text-xl"
+                to="/addpost"
               >
                 Publicar
-              </a>
-              <a
-                className="rounded border border-transparent px-3 py-1 transition-colors hover:border-neutral-700 hover:bg-neutral-800"
-                href="/myposts"
+              </Link>
+              <Link
+                className="shadow-nb shadow-nb-animation bg-[#ff7a5c] px-6 py-2 text-xl"
+                to="/myposts"
               >
                 Mis Publicaciones
-              </a>
+              </Link>
               <button
-                className="rounded border border-transparent px-3 py-1 transition-colors hover:border-neutral-700 hover:bg-neutral-800"
+                className="shadow-nb shadow-nb-animation bg-[#f4d738] px-6 py-2 text-xl"
                 onClick={handelClickLogout}
               >
                 Salir
               </button>
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-medium">{username}</span>
-                <img
-                  className="aspect-square h-8 w-8 rounded-full object-cover object-center"
-                  src={`https://ui-avatars.com/api/?name=${username}&background=random`}
-                  alt={`Profile image ${username}`}
-                />
-              </div>
+              <img
+                className="aspect-square h-12 w-12 rounded-full border-2 border-black object-cover object-center"
+                src={`https://ui-avatars.com/api/?name=${username}&background=random`}
+                alt={`Profile image ${username}`}
+              />
             </div>
           ) : (
-            <a
-              className="rounded border border-transparent px-4 py-1 text-2xl transition-colors hover:border-neutral-700 hover:bg-neutral-800"
-              href="/login"
+            <Link
+              className="shadow-nb shadow-nb-animation bg-[#a388ee] px-6 py-2 text-2xl"
+              to="/login"
             >
               Todas las funciones
-            </a>
+            </Link>
           )}
         </nav>
       </header>
       <main className="mx-auto max-w-7xl space-y-8 py-12">
-        <span className="text-xl font-semibold">{header}</span>
+        <h2 className="text-xl font-semibold">{header}</h2>
         {children}
       </main>
     </Layaot>

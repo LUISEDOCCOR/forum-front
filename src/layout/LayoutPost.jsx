@@ -1,4 +1,5 @@
 import { Layaot } from "./Layout";
+import { Link } from "react-router-dom";
 
 export const LayoutPost = ({ children, type }) => {
   return (
@@ -17,7 +18,7 @@ export const LayoutPost = ({ children, type }) => {
           </section>
           {children}
           <div className="mt-4 text-right text-lg">
-            <a href="/">Cancelar</a>
+            <Link to="/">Cancelar</Link>
           </div>
         </article>
       </main>

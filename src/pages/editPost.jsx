@@ -73,7 +73,7 @@ export const EditPost = () => {
               }}
               value={content}
               placeholder="Que estás pensando?"
-              className="h-96 w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
+              className="shadow-nb h-96 w-full max-w-xl bg-[#7fbc8c] px-3 py-2 text-xl font-semibold text-cBlack outline-none placeholder:text-cBlack"
             ></textarea>
             <Button label="Editar" />
           </form>

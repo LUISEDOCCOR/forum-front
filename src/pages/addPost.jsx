@@ -5,6 +5,7 @@ import { useRef } from "react";
 import toast from "react-hot-toast";
 import { AddPostAPI } from "../utils/posts/post";
 import { useNavigate } from "react-router-dom";
+import { TextArea } from "../components/textArea";
 
 export const AddPost = () => {
   const navigate = useNavigate();
@@ -39,11 +40,7 @@ export const AddPost = () => {
           type="text"
           placeholder="Ingresa el titulo"
         />
-        <textarea
-          ref={contentRef}
-          placeholder="Que estás pensando?"
-          className="h-96 w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
-        ></textarea>
+        <TextArea contentRef={contentRef} />
         <Button label="Publicar" />
       </form>
     </LayoutPost>

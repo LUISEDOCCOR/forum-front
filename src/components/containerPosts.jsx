@@ -1,6 +1,7 @@
 import { Spin } from "../components/spin";
 import { useAuth } from "../context/authContex";
 import { deletePost } from "../utils/posts/post";
+import { Link } from "react-router-dom";
 
 export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
   const { id } = useAuth();
@@ -18,12 +19,15 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
         </div>
       ) : (
         Posts.map(({ title, ID, content, author, user_id }) => (
-          <article key={ID} className="rounded-md border border-neonColor py-4">
+          <article
+            key={ID}
+            className="shadow-nb rounded-md border border-neonColor bg-[#b4d2ad] py-4"
+          >
             <div className="flex items-center gap-2 px-2">
               <img
                 className="aspect-square h-8 w-8 rounded-full object-cover object-center"
                 src={`https://ui-avatars.com/api/?name=${author}&background=random`}
-                alt="icon codetopia"
+                alt={`User profile image ${author}`}
               />
               <span className="text-xl">{author}</span>
             </div>
@@ -40,7 +44,7 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 stroke-cGray"
+                        className="h-6 w-6 stroke-cBlack"
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="#2c3e50"
@@ -56,10 +60,10 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
                         <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                       </svg>
                     </button>
-                    <a href={`editpost/${ID}`}>
+                    <Link to={`/editpost/${ID}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 stroke-cGray"
+                        className="h-6 w-6 stroke-cBlack"
                         strokeWidth="1.5"
                         fill="none"
                         strokeLinecap="round"
@@ -70,7 +74,7 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
                         <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
                         <path d="M16 5l3 3" />
                       </svg>
-                    </a>
+                    </Link>
                   </>
                 )}
               </div>

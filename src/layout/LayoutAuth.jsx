@@ -1,5 +1,6 @@
 import { Layaot } from "./Layout";
 import { useNavigateToHome } from "../hooks/useNavigateToHome";
+import { Link } from "react-router-dom";
 
 export const LayoutAuth = ({ children, type }) => {
   useNavigateToHome();
@@ -9,7 +10,7 @@ export const LayoutAuth = ({ children, type }) => {
       <main className="grid h-screen place-content-center">
         <article className="w-full max-w-xl space-y-12">
           <img
-            className="aspect-square h-20 w-20 rounded-full object-cover object-center"
+            className="aspect-square h-20 w-20 rounded-lg object-cover object-center"
             src="/icon.webp"
             alt="icon codetopia"
           />
@@ -24,14 +25,14 @@ export const LayoutAuth = ({ children, type }) => {
           </section>
           {children}
         </article>
-        <a
+        <Link
           className="mt-6 text-right"
-          href={type == "login" ? "/signup" : "login"}
+          to={type == "login" ? "/signup" : "/login"}
         >
           {type == "login"
             ? "¿No tienes cuenta? Únete"
             : "¿Ya tienes cuenta? Inicia sesión"}
-        </a>
+        </Link>
       </main>
     </Layaot>
   );

@@ -7,7 +7,7 @@ export const LayoutPost = ({ children, type }) => {
       <main className="grid h-screen place-content-center">
         <article className="w-full max-w-xl space-y-12">
           <img
-            className="aspect-square h-20 w-20 rounded-full object-cover object-center"
+            className="aspect-square h-20 w-20 rounded-lg object-cover object-center"
             src="/icon.webp"
             alt="icon codetopia"
           />

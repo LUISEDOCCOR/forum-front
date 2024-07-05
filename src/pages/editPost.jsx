@@ -65,7 +65,7 @@ export const EditPost = () => {
               value={title}
               type="text"
               placeholder="Ingrese el titulo"
-              className="w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
+              className="shadow-nb w-full max-w-xl bg-[#ff69b4] px-3 py-2 text-xl font-semibold text-cBlack outline-none placeholder:text-cBlack"
             ></input>
             <textarea
               onChange={(e) => {

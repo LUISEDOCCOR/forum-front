@@ -1,3 +1,6 @@
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -11,7 +14,10 @@ module.exports = {
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: { react: { version: "18.2" } },
   plugins: ["react-refresh"],
+  prettierConfig,
+  prettierPlugin,
   rules: {
+    ...prettierConfig.rules,
     "react/jsx-no-target-blank": "off",
     "react-refresh/only-export-components": [
       "warn",

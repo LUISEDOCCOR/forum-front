@@ -4,8 +4,7 @@ export const Input = ({ type, placeholder, reference }) => {
       ref={reference}
       type={type}
       placeholder={placeholder}
-      className="bg-transparent text-white w-full max-w-xl text-xl font-semibold py-2 px-3
-            rounded-lg outline-none border-2 border-cGray placeholder:text-cGray "
+      className="w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
     ></input>
   );
 };

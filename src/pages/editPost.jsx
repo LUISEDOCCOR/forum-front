@@ -52,7 +52,7 @@ export const EditPost = () => {
   return (
     <>
       {isLoading ? (
-        <div className="h-screen flex justify-center  items-center">
+        <div className="flex h-screen items-center justify-center">
           <Spin />
         </div>
       ) : (
@@ -65,8 +65,7 @@ export const EditPost = () => {
               value={title}
               type="text"
               placeholder="Ingrese el titulo"
-              className="bg-transparent text-white w-full max-w-xl text-xl font-semibold py-2 px-3
-                                    rounded-lg outline-none border-2 border-cGray placeholder:text-cGray "
+              className="w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
             ></input>
             <textarea
               onChange={(e) => {
@@ -74,8 +73,7 @@ export const EditPost = () => {
               }}
               value={content}
               placeholder="Que estás pensando?"
-              className="bg-transparent text-white w-full max-w-xl h-96 text-xl font-semibold py-2 px-3
-                                    rounded-lg outline-none border-2 border-cGray placeholder:text-cGray"
+              className="h-96 w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
             ></textarea>
             <Button label="Editar" />
           </form>

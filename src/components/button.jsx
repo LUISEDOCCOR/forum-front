@@ -1,9 +1,7 @@
-export const Button = ({label}) => {
-    return(
-        <button 
-            className="bg-neonColor text-cBlack w-full max-w-xl text-xl font-semibold py-2
-            rounded-lg hover:opacity-70 transition-opacity">
-            {label}
-        </button>
-    )
-}
+export const Button = ({ label }) => {
+  return (
+    <button className="w-full max-w-xl rounded-lg bg-neonColor py-2 text-xl font-semibold text-cBlack transition-opacity hover:opacity-70">
+      {label}
+    </button>
+  );
+};

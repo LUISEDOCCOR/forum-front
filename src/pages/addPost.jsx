@@ -42,8 +42,7 @@ export const AddPost = () => {
         <textarea
           ref={contentRef}
           placeholder="Que estás pensando?"
-          className="bg-transparent text-white w-full max-w-xl h-96 text-xl font-semibold py-2 px-3
-                rounded-lg outline-none border-2 border-cGray placeholder:text-cGray"
+          className="h-96 w-full max-w-xl rounded-lg border-2 border-cGray bg-transparent px-3 py-2 text-xl font-semibold text-white outline-none placeholder:text-cGray"
         ></textarea>
         <Button label="Publicar" />
       </form>

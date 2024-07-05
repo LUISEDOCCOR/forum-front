@@ -18,19 +18,19 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
         </div>
       ) : (
         Posts.map(({ title, ID, content, author, user_id }) => (
-          <article key={ID} className="border border-neonColor rounded-md py-4">
-            <div className="px-2 flex items-center gap-2">
+          <article key={ID} className="rounded-md border border-neonColor py-4">
+            <div className="flex items-center gap-2 px-2">
               <img
-                className="rounded-full object-cover object-center h-8 w-8 aspect-square"
+                className="aspect-square h-8 w-8 rounded-full object-cover object-center"
                 src={`https://ui-avatars.com/api/?name=${author}&background=random`}
                 alt="icon codetopia"
               />
               <span className="text-xl">{author}</span>
             </div>
-            <div className="px-4 mt-6">
+            <div className="mt-6 px-4">
               <h3 className="text-2xl font-bold">{title}</h3>
-              <p className="text-lg leading-sung mt-2">{content}</p>
-              <div className="flex items-center justify-end gap-6 mt-4">
+              <p className="leading-sung mt-2 text-lg">{content}</p>
+              <div className="mt-4 flex items-center justify-end gap-6">
                 {user_id == id && (
                   <>
                     <button
@@ -40,7 +40,7 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6 stroke-cGray"
+                        className="h-6 w-6 stroke-cGray"
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="#2c3e50"
@@ -59,7 +59,7 @@ export const ContainerPosts = ({ isLoading, Posts, fetchData }) => {
                     <a href={`editpost/${ID}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6 stroke-cGray"
+                        className="h-6 w-6 stroke-cGray"
                         strokeWidth="1.5"
                         fill="none"
                         strokeLinecap="round"

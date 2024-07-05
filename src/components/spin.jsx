@@ -1,9 +1,9 @@
 export const Spin = () => {
   return (
     <div className="relative inline-flex">
-      <div className="w-6 h-6 bg-blue-500 rounded-full"></div>
-      <div className="w-6 h-6 bg-blue-500 rounded-full absolute top-0 left-0 animate-ping"></div>
-      <div className="w-6 h-6 bg-blue-500 rounded-full absolute top-0 left-0 animate-pulse"></div>
+      <div className="h-6 w-6 rounded-full bg-blue-500"></div>
+      <div className="absolute left-0 top-0 h-6 w-6 animate-ping rounded-full bg-blue-500"></div>
+      <div className="absolute left-0 top-0 h-6 w-6 animate-pulse rounded-full bg-blue-500"></div>
     </div>
   );
 };
